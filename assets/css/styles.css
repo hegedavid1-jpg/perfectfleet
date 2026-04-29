@@ -595,6 +595,227 @@ p {
   height: 17px;
 }
 
+.offers {
+  background: var(--surface);
+}
+
+.offers__heading {
+  margin-bottom: 34px;
+}
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.offer-card,
+.offer-promo {
+  overflow: hidden;
+  min-width: 0;
+  border-radius: 8px;
+}
+
+.offer-card {
+  display: grid;
+  grid-template-rows: 138px 1fr;
+  border: 1px solid #d9dee3;
+  background: var(--surface);
+  box-shadow: 0 2px 7px rgba(7, 26, 42, 0.14);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 139, 134, 0.34);
+  box-shadow: 0 16px 34px rgba(7, 26, 42, 0.13);
+}
+
+.offer-card__media {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 138px;
+  padding: 26px 14px 0;
+  background: #68cbc8;
+}
+
+.offer-card__media img {
+  width: 108%;
+  height: 122px;
+  object-fit: cover;
+  object-position: center 74%;
+  filter: drop-shadow(0 10px 12px rgba(7, 26, 42, 0.18));
+  transform: translateY(5px);
+}
+
+.offer-card__badges {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 7px;
+  left: 7px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  color: var(--white);
+  font-size: 0.63rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.offer-badge--electric {
+  margin-right: auto;
+  background: #008c93;
+}
+
+.offer-badge--available {
+  background: #ffd200;
+  color: #071a2a;
+}
+
+.offer-badge--order {
+  background: #083554;
+}
+
+.offer-card__body {
+  display: grid;
+  align-content: start;
+  min-height: 214px;
+  padding: 28px 17px 16px;
+}
+
+.offer-card h3 {
+  margin: 0 0 2px;
+  color: #052b45;
+  font-size: 1.12rem;
+  line-height: 1.18;
+}
+
+.offer-card__variant {
+  min-height: 38px;
+  margin: 0 0 20px;
+  color: #052b45;
+  font-size: 0.75rem;
+  line-height: 1.32;
+}
+
+.offer-card__price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0 0 14px;
+  color: #052b45;
+  font-weight: 800;
+}
+
+.offer-card__price span {
+  font-size: 1.84rem;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.offer-card__price small {
+  color: var(--muted);
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.offer-card__price svg {
+  width: 13px;
+  height: 13px;
+  color: var(--muted);
+  stroke-width: 2.2;
+}
+
+.offer-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  margin-top: auto;
+  border: 1px solid #052b45;
+  border-radius: 999px;
+  color: #052b45;
+  font-size: 0.82rem;
+  font-weight: 900;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.offer-card__button:hover,
+.offer-card__button:focus-visible {
+  background: #052b45;
+  color: var(--white);
+}
+
+.offer-promo {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 352px;
+  padding: 36px 38px;
+  background:
+    linear-gradient(180deg, rgba(0, 135, 129, 0.9), rgba(0, 135, 129, 0.9)),
+    url("../img/leasing-benefits-fleet-row.png") center bottom / 180% auto no-repeat;
+  color: var(--white);
+}
+
+.offer-promo::after {
+  position: absolute;
+  right: -42px;
+  bottom: -42px;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  content: "";
+}
+
+.offer-promo div {
+  position: relative;
+  z-index: 1;
+}
+
+.offer-promo h3 {
+  max-width: 220px;
+  margin: 0 0 14px;
+  color: var(--white);
+  font-size: 1.42rem;
+  line-height: 1.14;
+}
+
+.offer-promo p {
+  max-width: 210px;
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.offer-promo a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--white);
+  color: #008781;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
 .why {
   background: var(--surface-soft);
 }
@@ -1454,7 +1675,8 @@ p {
   .category-grid,
   .service-grid,
   .service-icon-grid,
-  .page-card-grid {
+  .page-card-grid,
+  .offer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1609,10 +1831,23 @@ p {
   .service-grid,
   .service-icon-grid,
   .page-card-grid,
+  .offer-grid,
   .leasing__benefits,
   .value-list,
   .footer__grid {
     grid-template-columns: 1fr;
+  }
+
+  .offer-card {
+    grid-template-rows: 132px 1fr;
+  }
+
+  .offer-card__body {
+    min-height: 196px;
+  }
+
+  .offer-promo {
+    min-height: 280px;
   }
 
   .hero__actions {
