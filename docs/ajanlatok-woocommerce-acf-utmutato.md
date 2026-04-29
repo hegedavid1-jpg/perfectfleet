@@ -58,7 +58,33 @@ Az ajánlatlista WooCommerce product query legyen. A kártya a következő adato
 - Ár suffix
 - Részletek gomb
 
-A demóban ehhez az `offer-grid`, `offer-card`, `offer-badge` és `offer-promo` osztályok készültek az `ajanlatkeres.html` és `assets/css/styles.css` fájlokban.
+A demóban ehhez az `offer-grid`, `offer-card`, `offer-badge` és `offer-promo` osztályok készültek az `index.html` és `assets/css/styles.css` fájlokban.
+
+## Termékoldal minta
+
+A statikus demóban az első autó termékoldala az `auto-kia-pv5.html`. Éles WordPress oldalon ez WooCommerce single product template legyen, ACF mezőkkel kiegészítve.
+
+A termékoldal fő blokkjai:
+
+- Nagy hero kép vagy galéria
+- Morzsanavigáció
+- Autó neve és modellverzió
+- Sticky ajánlatkérő/kalkulátor kártya
+- Műszaki adatok
+- Havidíjban foglalt szolgáltatások
+- Visszahívás űrlap
+- Rövid futamidős/flex CTA
+- Kapcsolódó ajánlatok
+
+Javasolt termékoldal ACF mezők:
+
+- `pf_gallery_hero_image` - nagy termékoldali hero kép
+- `pf_contract_default_months` - alap futamidő
+- `pf_contract_options` - választható futamidők
+- `pf_mileage_default` - alap éves kilométer
+- `pf_mileage_options` - választható éves kilométerek
+- `pf_included_services` - havidíjban foglalt szolgáltatások ikon/szöveg listája
+- `pf_related_offer_ids` - kézzel kiválasztott kapcsolódó ajánlatok
 
 ## Javasolt WordPress sablonlogika
 
